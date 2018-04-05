@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tresemejota.ipcalculator.MainActivity"
+    android:layout_margin="8dp">
+
+
+    <TextView
+        android:id="@+id/txtIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/txt_ip" />
+
+    <EditText
+        android:id="@+id/editIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtIP"
+        android:ems="10"
+        android:inputType="number"
+        android:digits="123456789."
+        android:maxLength="15"/>
+
+    <TextView
+        android:id="@+id/pleca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editIP"
+        android:layout_toEndOf="@+id/editIP"
+        android:layout_toRightOf="@+id/editIP"
+        android:textSize="32sp"
+        android:text="@string/txt_pleca" />
+
+    <TextView
+        android:id="@+id/mascara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editIP"
+        android:layout_toEndOf="@+id/pleca"
+        android:layout_toRightOf="@+id/pleca"
+        android:text="@string/txt_mascara" />
+
+    <EditText
+        android:id="@+id/editMascara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pleca"
+        android:layout_toEndOf="@+id/pleca"
+        android:layout_toRightOf="@+id/pleca"
+        android:ems="10"
+        android:inputType="number"
+        android:digits="25."
+        android:maxLength="15"/>
+
+    <TextView
+        android:id="@+id/netID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editMascara"
+        android:layout_marginTop="44dp"
+        android:text="@string/txt_net_id" />
+
+    <EditText
+        android:id="@+id/editNetID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/netID"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:digits="123456789."
+        android:maxLength="15"/>
+
+    <TextView
+        android:id="@+id/txtBroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editNetID"
+        android:layout_marginTop="22dp"
+        android:text="@string/txt_broadcast" />
+
+    <EditText
+        android:id="@+id/editBroadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtBroadcast"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="number"
+        android:digits="123456789."
+        android:maxLength="15"/>
+
+    <TextView
+        android:id="@+id/txtCantHost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editBroadcast"
+        android:layout_marginTop="26dp"
+        android:text="@string/txt_cantidad_de_hosts" />
+
+    <EditText
+        android:id="@+id/editCantHost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtCantHost"
+        android:ems="8"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtParteRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editCantHost"
+        android:layout_alignEnd="@+id/mascara"
+        android:layout_alignRight="@+id/mascara"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:text="@string/txt_parte_de_red" />
+
+    <EditText
+        android:id="@+id/editParteRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtParteRed"
+        android:layout_alignStart="@+id/txtParteRed"
+        android:layout_below="@+id/txtParteRed"
+        android:ems="8"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtParteHost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editCantHost"
+        android:layout_marginTop="28dp"
+        android:text="@string/txt_parte_de_host" />
+
+    <EditText
+        android:id="@+id/editParteHost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtParteHost"
+        android:ems="8"
+        android:enabled="false"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editParteHost"
+        android:layout_alignLeft="@+id/editMascara"
+        android:layout_alignStart="@+id/editMascara"
+        android:background="@color/colorPrimary"
+        android:text="Calcular" />
+
+
+</RelativeLayout>

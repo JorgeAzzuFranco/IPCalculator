@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IP Calculator</string>
+    <string name="txt_ip">IP</string>
+    <string name="txt_pleca">/</string>
+    <string name="txt_mascara">Mascara</string>
+    <string name="txt_net_id">Net ID</string>
+    <string name="txt_broadcast">Broadcast</string>
+    <string name="txt_cantidad_de_hosts">Cantidad de Hosts</string>
+    <string name="txt_parte_de_red">Parte de red</string>
+    <string name="txt_parte_de_host">Parte de Host</string>
+</resources>
