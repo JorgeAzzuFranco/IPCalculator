@@ -8,4 +8,5 @@
     <string name="txt_cantidad_de_hosts">Cantidad de Hosts</string>
     <string name="txt_parte_de_red">Parte de red</string>
     <string name="txt_parte_de_host">Parte de Host</string>
+    <string name="hint_193_66_36_13">193.66.36.13</string>
 </resources>

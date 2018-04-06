@@ -24,10 +24,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtIP"
-        android:ems="10"
-        android:inputType="number"
+        android:ems="8"
+        android:inputType="numberDecimal"
         android:digits="123456789."
-        android:maxLength="15"/>
+        android:maxLength="15"
+        android:hint="@string/hint_193_66_36_13"/>
 
     <TextView
         android:id="@+id/pleca"
@@ -56,9 +57,10 @@
         android:layout_toEndOf="@+id/pleca"
         android:layout_toRightOf="@+id/pleca"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:digits="25."
-        android:maxLength="15"/>
+        android:maxLength="15"
+        android:hint="255.255.255.0"/>
 
     <TextView
         android:id="@+id/netID"
@@ -79,7 +81,7 @@
         android:layout_below="@+id/netID"
         android:ems="10"
         android:enabled="false"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:digits="123456789."
         android:maxLength="15"/>
 
@@ -102,7 +104,7 @@
         android:layout_below="@+id/txtBroadcast"
         android:ems="10"
         android:enabled="false"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:digits="123456789."
         android:maxLength="15"/>
 
@@ -125,7 +127,7 @@
         android:layout_below="@+id/txtCantHost"
         android:ems="8"
         android:enabled="false"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/txtParteRed"
@@ -147,7 +149,7 @@
         android:layout_below="@+id/txtParteRed"
         android:ems="8"
         android:enabled="false"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/txtParteHost"
@@ -168,7 +170,7 @@
         android:layout_below="@+id/txtParteHost"
         android:ems="8"
         android:enabled="false"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -178,7 +180,7 @@
         android:layout_alignLeft="@+id/editMascara"
         android:layout_alignStart="@+id/editMascara"
         android:background="@color/colorPrimary"
-        android:text="Calcular" />
-
+        android:text="Calcular"
+        android:onClick="cuentaIPs"/>
 
 </RelativeLayout>
