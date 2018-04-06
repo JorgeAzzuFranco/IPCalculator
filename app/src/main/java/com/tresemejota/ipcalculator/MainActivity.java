@@ -2,7 +2,6 @@ package com.tresemejota.ipcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -18,26 +17,9 @@ public class MainActivity extends AppCompatActivity {
         EditText getIP = (EditText) findViewById(R.id.editIP);
         EditText getMask = (EditText) findViewById(R.id.editMascara);
 
-        char[] ip = editToChar(getIP);
-        char[] mask = editToChar(getMask);
+        String strIP = Integer.toBinaryString(Integer.parseInt(getIP.getText().toString()));
+        String strMask = Integer.toBinaryString(Integer.parseInt(getMask.getText().toString()));
 
-        EditText netId = (EditText) findViewById(R.id.editNetID);
-        netId.setText(ip.toString() + "");
-
-        EditText bcast = (EditText) findViewById(R.id.editBroadcast);
-        netId.setText(mask.toString() + "");
-    }
-
-    public char[] editToChar (EditText ttc){
-
-        char[] charArray;
-        charArray = new char[15];
-
-        for(int i=1;i<ttc.length();i++){
-            String str = ttc.getText().toString();
-           charArray = str.toCharArray();
-        }
-
-        return charArray;
+        String  res = strIP || !strMask;
     }
 }
