@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         char[] charArray;
         charArray = new char[15];
 
-        for(int i=1;i<ttc.length()+1;i++){
+        for(int i=1;i<ttc.length();i++){
             String str = ttc.getText().toString();
            charArray = str.toCharArray();
         }
