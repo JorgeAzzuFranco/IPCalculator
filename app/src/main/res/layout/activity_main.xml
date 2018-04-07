@@ -26,7 +26,7 @@
         android:layout_below="@+id/txtIP"
         android:ems="8"
         android:inputType="numberDecimal"
-        android:digits="123456789."
+        android:digits="0123456789."
         android:maxLength="15"
         android:hint="@string/hint_193_66_36_13"/>
 
@@ -67,7 +67,7 @@
         android:layout_toRightOf="@+id/pleca"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:digits="25."
+        android:digits="025."
         android:maxLength="15"
         android:hint="255.255.255.0"/>
 
