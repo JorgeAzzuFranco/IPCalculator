@@ -28,7 +28,8 @@
         android:inputType="numberDecimal"
         android:digits="0123456789."
         android:maxLength="15"
-        android:hint="@string/hint_193_66_36_13"/>
+        android:hint="@string/hint_193_66_36_13"
+        android:text="192.10.10.32"/>
 
     <TextView
         android:id="@+id/controlIp"
@@ -69,7 +70,8 @@
         android:inputType="numberDecimal"
         android:digits="025."
         android:maxLength="15"
-        android:hint="255.255.255.0"/>
+        android:hint="255.255.255.0"
+        android:text="255.255.255.0"/>
 
     <TextView
         android:id="@+id/controlMask"

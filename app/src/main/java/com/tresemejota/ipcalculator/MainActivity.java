@@ -2,6 +2,7 @@ package com.tresemejota.ipcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         String soct4 = octetos.nextToken();
 
         //Split de Mascara
-        StringTokenizer mascara = new StringTokenizer(strIP,".");
+        StringTokenizer mascara = new StringTokenizer(strMask,".");
 
         String smask1 = mascara.nextToken();
         String smask2 = mascara.nextToken();
@@ -63,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
         int mask2 = Integer.parseInt(smask2);
         int mask3 = Integer.parseInt(smask3);
         int mask4 = Integer.parseInt(smask4);
+
+        Log.d("valores mascara: ", String.valueOf(mask1)+"."+String.valueOf(mask2)+"."+String.valueOf(mask3)+"."+String.valueOf(mask4));
 
         if(oct1 <= 255 && oct2 <= 255 && oct3 <= 255 && oct4 <= 255 &&
            mask1 <= 255 && mask2 <= 255 && mask3 <= 255 && mask4 <= 255){
@@ -84,23 +87,30 @@ public class MainActivity extends AppCompatActivity {
                 netID.setText(soct1+".0.0.0");
             }
 
+            Log.d("valores IP NoProc: ", String.valueOf(oct1)+"."+String.valueOf(oct2)+"."+String.valueOf(oct3)+"."+String.valueOf(oct4));
+            Log.d("valores mask NoProc: ", String.valueOf(mask1)+"."+String.valueOf(mask2)+"."+String.valueOf(mask3)+"."+String.valueOf(mask4));
+
             //Broadcast Hace el calculo pero al imprmir dan negativo
             int bcip1 = oct1 | ~mask1;
             int bcip2 = oct1 | ~mask2;
             int bcip3 = oct1 | ~mask3;
             int bcip4 = oct1 | ~mask4;
 
+            Log.d("valores OR: ", String.valueOf(bcip1)+"."+String.valueOf(bcip2)+"."+String.valueOf(bcip1)+"."+String.valueOf(bcip1));
+
             //Prueba
-            int bcip1a = ~bcip1;
-            int bcip2a = ~bcip2;
-            int bcip3a = ~bcip3;
-            int bcip4a = ~bcip4;
+            /*int bcip1a = -bcip1;
+            int bcip2a = -bcip2;
+            int bcip3a = -bcip3;
+            int bcip4a = -bcip4;*/
 
             //Pasando a string Para mostrar
-            String strbcip1 = String.valueOf(bcip1a);
-            String strbcip2 = String.valueOf(bcip2a);
-            String strbcip3 = String.valueOf(bcip3a);
-            String strbcip4 = String.valueOf(bcip4a);
+            String strbcip1 = String.valueOf(bcip1);
+            String strbcip2 = String.valueOf(bcip2);
+            String strbcip3 = String.valueOf(bcip3);
+            String strbcip4 = String.valueOf(bcip4);
+
+            Log.d("Final: ", strbcip1+"."+strbcip2+"."+strbcip3+"."+strbcip4);
 
             broadC.setText(strbcip1+"."+strbcip2+"."+strbcip3+"."+strbcip4);
 
