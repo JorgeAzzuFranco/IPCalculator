@@ -1,5 +1,6 @@
 package com.tresemejota.ipcalculator;
 
+import android.renderscript.ScriptIntrinsicYuvToRGB;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,9 +36,13 @@ public class MainActivity extends AppCompatActivity {
         long numIP = 0;
         long numMask = 0;
         long invertMask = 0;
+
         int maskInt = Integer.parseInt(getMask.getText().toString());
 
-        if (strIP.length != 4) return;
+        if (strIP.length != 4 || (Integer.parseInt(strIP[0]) > 255 && Integer.parseInt(strIP[1]) > 255 &&
+            Integer.parseInt(strIP[2]) > 255 &&Integer.parseInt(strIP[3]) > 255 ) || maskInt >= 32){
+            return;
+        };
 
         //Obteniendo la IP transformada a binario
         for (int i = 3; i >= 0; i--) {

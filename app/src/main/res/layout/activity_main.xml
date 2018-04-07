@@ -31,15 +31,6 @@
         android:hint="@string/hint_193_66_36_13" />
 
     <TextView
-        android:id="@+id/controlIp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editIP"
-        android:layout_toEndOf="@+id/netID"
-        android:layout_toRightOf="@+id/netID"
-        android:text="" />
-
-    <TextView
         android:id="@+id/pleca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,17 +59,8 @@
         android:ems="10"
         android:inputType="numberDecimal"
         android:digits="0123456789."
-        android:maxLength="15"
+        android:maxLength="2"
         android:hint="24" />
-
-    <TextView
-        android:id="@+id/controlMask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editMascara"
-        android:layout_toEndOf="@+id/txtParteRed"
-        android:layout_toRightOf="@+id/txtParteRed"
-        android:text="" />
 
     <TextView
         android:id="@+id/netID"
