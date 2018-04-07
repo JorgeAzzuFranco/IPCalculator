@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.nio.file.ClosedDirectoryStreamException;
 
@@ -27,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         EditText parteH = (EditText) findViewById(R.id.editParteHost);
 
         //TextView para editar
-
+        TextView controlIP = (TextView) findViewById(R.id.controlIp);
+        TextView controlMask = (TextView) findViewById(R.id.controlMask);
 
     }
 }
