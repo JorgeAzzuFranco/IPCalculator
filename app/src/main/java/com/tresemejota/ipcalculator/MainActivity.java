@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             if(mask4 == 0){
                 netID.setText(soct1+"."+soct2+"."+soct3+".0");
             }
-            else if (mask3 == 0 && mask4 ==0){
+            if (mask3 == 0 && mask4 ==0){
                 netID.setText(soct1+"."+soct2+".0.0");
             }
             else if (mask2 == 0 && mask3 == 0 && mask4 == 0){
@@ -90,10 +90,17 @@ public class MainActivity extends AppCompatActivity {
             int bcip3 = oct1 | ~mask3;
             int bcip4 = oct1 | ~mask4;
 
-            String strbcip1 = String.valueOf(bcip1);
-            String strbcip2 = String.valueOf(bcip2);
-            String strbcip3 = String.valueOf(bcip3);
-            String strbcip4 = String.valueOf(bcip4);
+            //Prueba
+            int bcip1a = ~bcip1;
+            int bcip2a = ~bcip2;
+            int bcip3a = ~bcip3;
+            int bcip4a = ~bcip4;
+
+            //Pasando a string Para mostrar
+            String strbcip1 = String.valueOf(bcip1a);
+            String strbcip2 = String.valueOf(bcip2a);
+            String strbcip3 = String.valueOf(bcip3a);
+            String strbcip4 = String.valueOf(bcip4a);
 
             broadC.setText(strbcip1+"."+strbcip2+"."+strbcip3+"."+strbcip4);
 
