@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.nio.file.ClosedDirectoryStreamException;
+
 public class MainActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,13 +15,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void cuentaIPs (View v){
+    public void cuentaIP (View v){
+
+        //EditText para editar
         EditText getIP = (EditText) findViewById(R.id.editIP);
         EditText getMask = (EditText) findViewById(R.id.editMascara);
+        EditText netID = (EditText) findViewById(R.id.editNetID);
+        EditText broadC = (EditText) findViewById(R.id.editBroadcast);
+        EditText cantH = (EditText) findViewById(R.id.editCantHost);
+        EditText parteR = (EditText) findViewById(R.id.editParteRed);
+        EditText parteH = (EditText) findViewById(R.id.editParteHost);
 
-        String strIP = Integer.toBinaryString(Integer.parseInt(getIP.getText().toString()));
-        String strMask = Integer.toBinaryString(Integer.parseInt(getMask.getText().toString()));
+        //TextView para editar
 
-        String  res = strIP || !strMask;
+
     }
 }

@@ -181,6 +181,6 @@
         android:layout_alignStart="@+id/editMascara"
         android:background="@color/colorPrimary"
         android:text="Calcular"
-        android:onClick="cuentaIPs"/>
+        android:onClick="cuentaIP"/>
 
 </RelativeLayout>
